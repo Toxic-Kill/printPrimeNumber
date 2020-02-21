@@ -12,7 +12,7 @@ using namespace std;
 int primeNumber(int a)
 {
 	int b;
-	if (a % 2 == 0)
+	if (a==1||a % 2 == 0)
 	{
 		return 0;
 	}
