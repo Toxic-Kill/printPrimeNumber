@@ -12,13 +12,17 @@ using namespace std;
 int primeNumber(int a)
 {
 	int b;
+	if (a == 2)
+	{
+		return 1;
+	}
 	if (a==1||a % 2 == 0)
 	{
 		return 0;
 	}
 	else
 	{
-		for (b = 3; b <=sqrt(a); b += 2)
+		for (b = 3; b <= sqrt(a); b += 2)
 		{
 			if (a%b == 0)
 			{
