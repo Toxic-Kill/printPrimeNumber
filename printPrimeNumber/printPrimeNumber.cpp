@@ -2,10 +2,45 @@
 //
 
 #include <iostream>
+#include <math.h>
+
+using namespace std;
+
+//辨认是否为素数
+//若为素数，返回1
+//反之，返回0
+int primeNumber(int a)
+{
+	int b;
+	if (a % 2 == 0)
+	{
+		return 0;
+	}
+	else
+	{
+		for (b = 3; b <=sqrt(a); b += 2)
+		{
+			if (a%b == 0)
+			{
+				return 0;
+			}
+		}
+		return 1;
+	}
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	int i;
+	cout << "PrimeNumbers are:" << endl;
+	for (i = 1; i < 101; i++)
+	{
+		if (primeNumber(i) == 1)
+		{
+			cout << i << endl;
+		}
+	}
+	return 0;
 }
 
 // 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
